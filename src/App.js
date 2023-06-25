@@ -1,4 +1,5 @@
 import './App.css';
+import data from './data';
 import {BrowserRouter, Link } from "react-router-dom";
 
 function App() {
@@ -41,6 +42,11 @@ function App() {
       </aside>
       <main className="main">
         <div className="content">
+          {data.products.map((product)=>(
+            <div>
+              <a>{product.name}</a>
+            </div>
+          ))}
         </div>
       </main>
       <footer className="footer">All rights reserved.</footer>
